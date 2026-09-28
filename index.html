@@ -41,9 +41,9 @@
     .btn:hover { transform: translateY(-3px); background: #79C0FF; }
     .btn.secondary { background: transparent; color: var(--blue); }
     .btn.secondary:hover { background: var(--blue-soft); }
-    .portrait-wrap { justify-self: center; position: relative; width: min(100%, 340px); }
+    .portrait-wrap { justify-self: center; position: relative; width: min(100%, 300px); }
     .portrait-frame { border: 1px solid var(--border); background: var(--card); border-radius: 22px; padding: 10px; box-shadow: 0 20px 70px rgba(0,0,0,.3); }
-    .portrait { display: block; width: 100%; aspect-ratio: 4/5; object-fit: cover; object-position: center 25%; border-radius: 15px; }
+    .portrait { display: block; width: 100%; height: 420px; object-fit: cover; object-position: center 25%; border-radius: 15px; }
     .portrait-caption { position: absolute; bottom: 25px; left: -35px; background: var(--panel); border: 1px solid var(--border); border-radius: 10px; padding: 10px 14px; color: var(--green); font: 13px Consolas, monospace; }
     .section-head { text-align: center; margin-bottom: 42px; }
     .section-head h2 { font-size: 32px; margin-bottom: 7px; }
@@ -60,6 +60,7 @@
     .gallery { display: grid; grid-template-columns: 1fr 1fr; gap: 3px; background: var(--border); }
     .gallery img { width: 100%; height: 175px; object-fit: cover; display: block; background: var(--panel); }
     .gallery.single img { grid-column: 1 / -1; height: 230px; object-fit: contain; }
+    .gallery img.logo-shot { object-fit: contain; padding: 14px; background: #050505; }
     .project-body { padding: 23px; display: flex; flex-direction: column; flex: 1; }
     .project-top { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 12px; }
     .project h3 { font-size: 20px; color: var(--blue); }
@@ -99,6 +100,7 @@
       .intro { margin-left: auto; margin-right: auto; }
       .actions { justify-content: center; }
       .portrait-wrap { width: min(70%, 290px); }
+      .portrait { height: 360px; }
       .portrait-caption { left: -20px; }
       section { padding: 62px 0; }
       .projects { grid-template-columns: 1fr; }
@@ -178,8 +180,8 @@
       <div class="projects">
         <article class="project">
           <div class="gallery">
-            <img src="assets/gameistry-loading.png" alt="Gameistry game loading screen" loading="lazy">
             <img src="assets/gameistry-gameplay.png" alt="Gameistry chemistry experiment gameplay" loading="lazy">
+            <img class="logo-shot" src="assets/gameistry-logo.png" alt="Game-istry project logo" loading="lazy">
           </div>
           <div class="project-body">
             <div class="project-top"><h3>🎮 Game-istry</h3><span class="badge done">Completed</span></div>
@@ -204,9 +206,6 @@
         </article>
 
         <article class="project">
-          <div class="gallery single">
-            <img src="assets/gameistry-logo.png" alt="Game-istry project logo" loading="lazy">
-          </div>
           <div class="project-body">
             <div class="project-top"><h3>⚙️ C++ Project</h3><span class="badge planned">Coming Soon</span></div>
             <p>A future project to demonstrate programming fundamentals and problem-solving skills.</p>
