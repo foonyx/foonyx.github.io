@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A 3D environment design and cinematic animation project created with Autodesk Maya. Foon's contribution focused on the dining room scene.">
+  <meta name="theme-color" content="#0D1117">
+  <title>The Importance of Cleanliness | Foon Yul Xin</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .project-hero { padding: 76px 0 52px; }
+    .project-hero h1 { max-width: 900px; }
+    .project-hero .lead { max-width: 780px; color: var(--muted); font-size: 17px; margin: 18px 0 24px; }
+    .project-meta { display: flex; flex-wrap: wrap; gap: 9px; margin: 22px 0 28px; }
+    .project-meta span { color: var(--muted); background: var(--card); border: 1px solid var(--border); padding: 7px 12px; border-radius: 7px; font-size: 13px; }
+    .feature-image { display: block; width: 100%; max-height: 590px; object-fit: cover; border: 1px solid var(--border); border-radius: 14px; background: var(--card); }
+    .content-panel { background: var(--card); border: 1px solid var(--border); border-radius: 13px; padding: clamp(22px, 4vw, 36px); }
+    .content-panel p, .content-panel li { color: var(--muted); }
+    .content-panel h3 { color: var(--blue); margin-bottom: 12px; }
+    .contribution-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+    .contribution-grid .content-panel { height: 100%; }
+    .contribution-grid ul { padding-left: 20px; }
+    .model-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+    .model-card { overflow: hidden; background: var(--card); border: 1px solid var(--border); border-radius: 11px; }
+    .model-card img { width: 100%; height: 210px; object-fit: contain; display: block; background: #10151c; padding: 8px; }
+    .model-card p { padding: 12px 14px; color: var(--muted); font-size: 13px; }
+    .scene-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+    .scene-grid figure { margin: 0; background: var(--card); border: 1px solid var(--border); border-radius: 11px; overflow: hidden; }
+    .scene-grid img { width: 100%; display: block; }
+    .scene-grid figcaption { padding: 12px 14px; color: var(--muted); font-size: 13px; }
+    .video-frame { position: relative; width: 100%; aspect-ratio: 16 / 9; overflow: hidden; border-radius: 13px; border: 1px solid var(--border); background: #000; }
+    .video-frame iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+    .back-link { display: inline-flex; margin-top: 28px; text-decoration: none; font-weight: 700; }
+    @media (max-width: 760px) { .contribution-grid, .model-grid, .scene-grid { grid-template-columns: 1fr; } .model-card img { height: auto; max-height: 280px; } .project-hero { padding-top: 52px; } }
+  </style>
+</head>
+<body>
+<header>
+  <div class="wrap nav">
+    <a class="logo" href="index.html">FOON<span>_</span>YUL<span>_</span>XIN</a>
+    <nav aria-label="Project navigation">
+      <a href="index.html#projects">← All Projects</a>
+      <a href="#contribution">My Contribution</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#cinematic">Cinematic</a>
+    </nav>
+  </div>
+</header>
+<main>
+  <section class="project-hero">
+    <div class="wrap">
+      <div class="eyebrow"><span class="pulse"></span> 3D Modeling &amp; Cinematic Animation</div>
+      <h1>The Importance of <span class="blue">Cleanliness</span></h1>
+      <p class="lead">A university group project that tells a story through a 3D home environment and cinematic scenes. My individual focus was the dining room environment and its modeled objects.</p>
+      <div class="project-meta">
+        <span>Software: Autodesk Maya</span><span>Course: 3D Modelling and Animation (BCM3233)</span><span>Type: Group Project</span><span>My role: Dining Room Scene</span>
+      </div>
+      <img class="feature-image" src="assets/maya-dining-perspective.jpeg" alt="Rendered perspective view of the dining room scene created for The Importance of Cleanliness">
+    </div>
+  </section>
+
+  <section id="contribution">
+    <div class="wrap">
+      <div class="section-head"><h2>My Contribution</h2><p><span>//</span> Dining room environment design</p></div>
+      <div class="contribution-grid">
+        <div class="content-panel">
+          <h3>Environment &amp; 3D Modeling</h3>
+          <p>I worked on the dining room environment where the character has breakfast. My modeled assets included furniture, decorative objects, and other room details.</p>
+          <ul>
+            <li>Dining table and chairs</li>
+            <li>Cabinet, door, and door handle</li>
+            <li>Wall paintings and decorative objects</li>
+            <li>Tabletop items such as cutlery, plates, a book, and a phone</li>
+          </ul>
+        </div>
+        <div class="content-panel">
+          <h3>Scene Setup &amp; Visuals</h3>
+          <p>I also contributed to the presentation of the dining room scene through lighting, materials, scene composition, and camera views.</p>
+          <ul>
+            <li>Applied materials and textures to modeled objects</li>
+            <li>Set up Arnold mesh lighting for the room</li>
+            <li>Planned camera shots, including a medium shot and a point-of-view shot</li>
+            <li>Helped stage the breakfast scene within the group's cinematic story</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="gallery">
+    <div class="wrap">
+      <div class="section-head"><h2>3D Modeling Showcase</h2><p><span>//</span> Selected models from my dining room scene</p></div>
+      <div class="model-grid">
+        <article class="model-card"><img src="assets/maya-table-chair.jpeg" alt="Dining table and chair models shown in Maya's multi-view modeling workspace" loading="lazy"><p>Dining table &amp; chair — modeled furniture assets.</p></article>
+        <article class="model-card"><img src="assets/maya-cabinet-door.jpeg" alt="Cabinet and door models shown in Maya's multi-view workspace" loading="lazy"><p>Cabinet, door &amp; door handle.</p></article>
+        <article class="model-card"><img src="assets/maya-vase-wine.jpeg" alt="Vase and wine bottle models shown in Maya's multi-view workspace" loading="lazy"><p>Decorative objects — vase and wine bottle.</p></article>
+        <article class="model-card"><img src="assets/maya-book-phone.jpeg" alt="Book and phone models shown in Maya's multi-view workspace" loading="lazy"><p>Book &amp; phone.</p></article>
+        <article class="model-card"><img src="assets/maya-clock-fan.jpeg" alt="Clock and ceiling fan models shown in Maya's multi-view workspace" loading="lazy"><p>Clock &amp; ceiling fan.</p></article>
+        <article class="model-card"><img src="assets/maya-cinematic-staging.jpeg" alt="A frame from the dining room scene showing the character and breakfast table" loading="lazy"><p>Dining room staging — the environment in the cinematic scene.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="environment">
+    <div class="wrap">
+      <div class="section-head"><h2>Completed Environment</h2><p><span>//</span> Dining room views</p></div>
+      <div class="scene-grid">
+        <figure><img src="assets/maya-dining-front.jpeg" alt="Front view of the completed dining room environment" loading="lazy"><figcaption>Front view of the dining room.</figcaption></figure>
+        <figure><img src="assets/maya-dining-perspective.jpeg" alt="Perspective view of the completed dining room environment" loading="lazy"><figcaption>Perspective view of the dining room.</figcaption></figure>
+        <figure><img src="assets/maya-dining-top.jpeg" alt="Top view of the completed dining room environment" loading="lazy"><figcaption>Top view of the room layout.</figcaption></figure>
+        <figure><img src="assets/maya-dining-side.jpeg" alt="Side view of the completed dining room environment" loading="lazy"><figcaption>Side view of the environment.</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <section id="cinematic">
+    <div class="wrap">
+      <div class="section-head"><h2>Watch the Cinematic</h2><p><span>//</span> The full group animation</p></div>
+      <div class="video-frame"><iframe src="https://www.youtube-nocookie.com/embed/kQCVLroa6oo" title="The Importance of Cleanliness — group cinematic animation" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+      <a class="back-link" href="index.html#projects">← Back to all projects</a>
+    </div>
+  </section>
+</main>
+<footer><p>© 2026 Foon Yul Xin <span>·</span> Built with care and code.</p></footer>
+</body>
+</html>
