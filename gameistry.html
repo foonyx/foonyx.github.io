@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Game-istry, a 2D educational chemistry game built with Unity and C# to help Form 4 science-stream students learn about the rate of reaction.">
+  <meta name="description" content="Game-istry is a Unity 2D educational chemistry game about the rate of reaction, with learning and simulation modes across three experiment modules.">
   <meta name="theme-color" content="#0D1117">
   <title>Game-istry | Foon Yul Xin</title>
   <link rel="stylesheet" href="styles.css">
@@ -13,12 +13,16 @@
     .project-hero .lead { max-width: 790px; color: var(--muted); font-size: 17px; margin: 18px 0 24px; }
     .project-meta { display: flex; flex-wrap: wrap; gap: 9px; margin: 22px 0 28px; }
     .project-meta span { color: var(--muted); background: var(--card); border: 1px solid var(--border); padding: 7px 12px; border-radius: 7px; font-size: 13px; }
-    .feature-image { display: block; width: 100%; max-height: 560px; object-fit: contain; border: 1px solid var(--border); border-radius: 14px; background: var(--card); padding: 14px; }
+    .feature-image { display: block; width: min(100%, 680px); max-height: 300px; object-fit: contain; margin: 0 auto; border: 1px solid var(--border); border-radius: 14px; background: var(--card); padding: 24px; }
     .content-panel { background: var(--card); border: 1px solid var(--border); border-radius: 13px; padding: clamp(22px, 4vw, 36px); }
     .content-panel p, .content-panel li { color: var(--muted); }
     .content-panel h3 { color: var(--blue); margin-bottom: 12px; }
     .detail-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
     .detail-grid ul { padding-left: 20px; }
+    .module-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:16px; }
+    .module-card { background:var(--card); border:1px solid var(--border); border-radius:12px; padding:22px; }
+    .module-card h3 { color:var(--blue); margin:0 0 10px; }
+    .module-card p { color:var(--muted); margin:0; }
     .game-gallery { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
     .game-gallery figure { margin: 0; overflow: hidden; background: var(--card); border: 1px solid var(--border); border-radius: 12px; }
     .game-gallery img { width: 100%; height: 280px; object-fit: contain; display: block; background: #10151c; padding: 12px; }
@@ -28,7 +32,7 @@
     .project-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 16px; margin-top: 24px; }
     .project-actions .btn { display: inline-flex; align-items: center; justify-content: center; }
     .back-link { display: inline-flex; margin-top: 28px; text-decoration: none; font-weight: 700; }
-    @media (max-width: 760px) { .detail-grid, .game-gallery { grid-template-columns: 1fr; } .game-gallery img { height: auto; max-height: 350px; } .project-hero { padding-top: 52px; } }
+    @media (max-width: 760px) { .detail-grid, .game-gallery, .module-grid { grid-template-columns: 1fr; } .game-gallery img { height: auto; max-height: 350px; } .project-hero { padding-top: 52px; } }
   </style>
 </head>
 <body>
@@ -38,21 +42,22 @@
     <nav aria-label="Project navigation">
       <a href="index.html#projects">← All Projects</a>
       <a href="#overview">Overview</a>
+      <a href="#modules">Learning Modules</a>
       <a href="#gallery">Gallery</a>
-      <a href="#demo">Gameplay Demo</a>
+      <a href="#demo">Demo</a>
     </nav>
   </div>
 </header>
 <main>
   <section class="project-hero" id="overview">
     <div class="wrap">
-      <div class="eyebrow"><span class="pulse"></span> 2D Game Development · Educational Game</div>
+      <div class="eyebrow"><span class="pulse"></span> 2D Game Development · Educational Simulation</div>
       <h1>Game-<span class="blue">istry</span></h1>
-      <p class="lead">A 2D educational chemistry game developed with Unity to help Form 4 science-stream students learn about the rate of reaction through interactive activities.</p>
+      <p class="lead">A 2D educational chemistry game developed in Unity to help secondary-school science-stream students explore the rate of chemical reactions through virtual laboratory experiments.</p>
       <div class="project-meta">
-        <span>Engine: Unity</span><span>Language: C#</span><span>Type: 2D Educational Game</span><span>Topic: Rate of Reaction</span>
+        <span>Engine: Unity</span><span>Language: C#</span><span>Genre: Educational Simulation</span><span>Curriculum: Form 5 Chemistry</span><span>Topic: Rate of Reaction</span>
       </div>
-      <img class="feature-image" src="assets/gameistry-gameplay.png" alt="Gameplay screenshot from Game-istry showing the educational chemistry game">
+      <img class="feature-image" src="assets/gameistry-logo.png" alt="Game-istry educational chemistry game logo">
       <div class="project-actions">
         <a class="btn" href="https://github.com/foonyx/Gameistry/releases/latest" target="_blank" rel="noopener noreferrer">View Game &amp; Download →</a>
         <a class="btn secondary" href="https://youtu.be/MVEx8UYTfno" target="_blank" rel="noopener noreferrer">▶ Watch Demo on YouTube ↗</a>
@@ -63,10 +68,51 @@
 
   <section>
     <div class="wrap">
-      <div class="section-head"><h2>About the Game</h2><p><span>//</span> Learning chemistry through interactive play</p></div>
+      <div class="section-head"><h2>Project Overview</h2><p><span>//</span> The idea behind Game-istry</p></div>
       <div class="content-panel">
-        <p>Game-istry is a 2D educational game created to support Form 4 science-stream students in learning the concept of the rate of reaction. The project combines a game-based format with chemistry learning activities.</p>
-        <p>It was developed using Unity and C#. The project is available through its GitHub repository and release page.</p>
+        <p>Game-istry was created as an alternative, interactive way for students to learn chemistry experiments. It simulates a laboratory experience in which players collect apparatus and materials, follow experiment steps, and observe outcomes related to the rate of reaction.</p>
+        <p>The project focuses on Form 5 Chemistry, Chapter 1, and is designed for students around 16–17 years old in the science stream. The game combines 2D visuals, animation, text, and sound to guide players through the activities.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="modules">
+    <div class="wrap">
+      <div class="section-head"><h2>Learning Modules</h2><p><span>//</span> Three factors that affect reaction rate</p></div>
+      <div class="module-grid">
+        <article class="module-card"><h3>01 · Catalyst</h3><p>Explore how the presence of a catalyst affects the rate of a chemical reaction.</p></article>
+        <article class="module-card"><h3>02 · Surface Area</h3><p>Investigate how the size of a substance's surface area relates to reaction rate.</p></article>
+        <article class="module-card"><h3>03 · Temperature</h3><p>Explore how temperature affects the speed of a chemical reaction.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="section-head"><h2>Gameplay &amp; Mechanics</h2><p><span>//</span> Learn first, then test your understanding</p></div>
+      <div class="detail-grid">
+        <div class="content-panel"><h3>Two Play Modes</h3><ul>
+          <li><strong>Learning Mode:</strong> No countdown timer; players can work through the experiment while managing a health system.</li>
+          <li><strong>Simulation Mode:</strong> Players complete experiment objectives within a time limit, with a single attempt per run.</li>
+        </ul></div>
+        <div class="content-panel"><h3>Player Interaction</h3><ul>
+          <li>Move around the laboratory using the WASD keys.</li>
+          <li>Use mouse and keyboard input to interact with objects and events.</li>
+          <li>Collect the correct apparatus and materials, then follow the experiment sequence.</li>
+          <li>Complete objectives to progress through each module.</li>
+        </ul></div>
+        <div class="content-panel"><h3>Feedback &amp; Progress</h3><ul>
+          <li>Incorrect choices or steps can reduce player health in Learning Mode.</li>
+          <li>Simulation Mode uses a time limit to add a challenge.</li>
+          <li>Players receive a star rating based on remaining health or completion time, depending on the mode.</li>
+          <li>Completion screens provide a summary of the experiment's concept and outcome.</li>
+        </ul></div>
+        <div class="content-panel"><h3>Development Elements</h3><ul>
+          <li>2D laboratory environment and level layout.</li>
+          <li>Interactive objects, inventory and drag-and-drop-related systems.</li>
+          <li>Objective guidance, dialogue, and experiment-step progression.</li>
+          <li>Visual effects, animations, sound effects, and background music.</li>
+        </ul></div>
       </div>
     </div>
   </section>
@@ -75,19 +121,18 @@
     <div class="wrap">
       <div class="section-head"><h2>Gameplay Gallery</h2><p><span>//</span> Screens and interface views from the project</p></div>
       <div class="game-gallery">
-        <figure><img src="assets/gameistry-logo.png" alt="Game-istry game logo" loading="lazy"><figcaption>Game-istry project logo.</figcaption></figure>
-        <figure><img src="assets/gameistry-title-screen.jpeg" alt="Game-istry title screen" loading="lazy"><figcaption>Title screen — start of the game.</figcaption></figure>
-        <figure><img src="assets/gameistry-stage-selection.jpeg" alt="Stage selection screen with game modes and modules" loading="lazy"><figcaption>Stage selection — choose a learning or simulation mode and module.</figcaption></figure>
-        <figure><img src="assets/gameistry-loading.png" alt="Game-istry loading screen" loading="lazy"><figcaption>Loading screen.</figcaption></figure>
+        <figure><img src="assets/gameistry-title-screen.jpeg" alt="Game-istry title screen" loading="lazy"><figcaption>Title screen — the starting point of the game.</figcaption></figure>
+        <figure><img src="assets/gameistry-stage-selection.jpeg" alt="Stage selection screen with game modes and modules" loading="lazy"><figcaption>Stage selection — choose a module and play mode.</figcaption></figure>
+        <figure><img src="assets/gameistry-loading.png" alt="Game-istry loading screen" loading="lazy"><figcaption>Loading screen between game scenes.</figcaption></figure>
         <figure><img src="assets/gameistry-lab-environment.jpeg" alt="Laboratory room environment in Game-istry" loading="lazy"><figcaption>Laboratory environment.</figcaption></figure>
         <figure><img src="assets/gameistry-lab-gameplay.jpeg" alt="Gameplay view inside the chemistry laboratory" loading="lazy"><figcaption>In-game laboratory view.</figcaption></figure>
-        <figure><img src="assets/gameistry-gameplay.png" alt="Game-istry chemistry experiment gameplay" loading="lazy"><figcaption>Gameplay — chemistry learning environment.</figcaption></figure>
+        <figure><img src="assets/gameistry-gameplay.png" alt="Game-istry chemistry experiment gameplay" loading="lazy"><figcaption>Experiment gameplay and laboratory interactions.</figcaption></figure>
         <figure><img src="assets/gameistry-pause-menu.jpeg" alt="Pause menu in Game-istry" loading="lazy"><figcaption>Pause menu and gameplay controls.</figcaption></figure>
         <figure><img src="assets/gameistry-settings-screen.jpeg" alt="Game-istry settings screen" loading="lazy"><figcaption>Settings interface.</figcaption></figure>
-        <figure><img src="assets/gameistry-completion-learning.jpeg" alt="Learning mode completion screen" loading="lazy"><figcaption>Learning mode completion screen.</figcaption></figure>
-        <figure><img src="assets/gameistry-game-over.jpeg" alt="Game over screen" loading="lazy"><figcaption>Game over screen.</figcaption></figure>
-        <figure><img src="assets/gameistry-objective-ui.jpeg" alt="Objective interface during gameplay" loading="lazy"><figcaption>Objective and task interface.</figcaption></figure>
-        <figure><img src="assets/gameistry-level-design.jpeg" alt="Top-down level design of the game laboratory" loading="lazy"><figcaption>Level layout and environment design.</figcaption></figure>
+        <figure><img src="assets/gameistry-objective-ui.jpeg" alt="Objective interface during gameplay" loading="lazy"><figcaption>Objective panel and task guidance.</figcaption></figure>
+        <figure><img src="assets/gameistry-completion-learning.jpeg" alt="Learning mode completion screen" loading="lazy"><figcaption>Learning mode completion and feedback.</figcaption></figure>
+        <figure><img src="assets/gameistry-game-over.jpeg" alt="Game over screen" loading="lazy"><figcaption>Game-over screen.</figcaption></figure>
+        <figure><img src="assets/gameistry-level-design.jpeg" alt="Top-down level design of the game laboratory" loading="lazy"><figcaption>Laboratory level layout.</figcaption></figure>
       </div>
     </div>
   </section>
@@ -96,6 +141,7 @@
     <div class="wrap">
       <div class="section-head"><h2>Watch the Gameplay Demo</h2><p><span>//</span> Game-istry in action</p></div>
       <div class="video-frame"><iframe src="https://www.youtube-nocookie.com/embed/MVEx8UYTfno" title="Game-istry gameplay demo" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+      <div class="content-panel" style="margin-top:18px"><h3>Scope &amp; Future Enhancements</h3><p>The current project covers three rate-of-reaction topics. The thesis identifies expanding the game with additional chemistry topics and increasing hands-on interaction—such as more drag-and-drop activities—as possible future improvements.</p></div>
       <a class="back-link" href="index.html#projects">← Back to all projects</a>
     </div>
   </section>
