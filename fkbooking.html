@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="FKBooking is a Laravel-based laboratory reservation system project for UMPSA Faculty of Computing students, with lab availability, booking, and dashboard features.">
+  <meta name="theme-color" content="#0D1117">
+  <title>FKBooking | Foon Yul Xin</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .project-hero{padding:76px 0 48px}.project-hero h1{max-width:900px}.project-hero .lead{max-width:820px;color:var(--muted);font-size:17px;margin:18px 0 24px;line-height:1.8}
+    .project-meta{display:flex;flex-wrap:wrap;gap:9px;margin:22px 0 28px}.project-meta span{color:var(--muted);background:var(--card);border:1px solid var(--border);padding:7px 12px;border-radius:7px;font-size:13px}
+    .project-actions{display:flex;flex-wrap:wrap;align-items:center;gap:16px;margin-top:24px}.project-actions .btn{display:inline-flex;align-items:center;justify-content:center}
+    .content-panel{background:var(--card);border:1px solid var(--border);border-radius:13px;padding:clamp(22px,4vw,36px)}.content-panel p,.content-panel li{color:var(--muted)}.content-panel h3{color:var(--blue);margin:0 0 12px}
+    .feature-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}.feature-card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:22px}.feature-card h3{margin:0 0 10px;color:var(--blue)}.feature-card p{margin:0;color:var(--muted)}
+    .stack-list{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}.stack-list span{border:1px solid var(--border);background:var(--card);border-radius:8px;padding:9px 13px;color:var(--muted);font-size:14px}
+    .screen-gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}.screen-gallery figure{margin:0;overflow:hidden;background:var(--card);border:1px solid var(--border);border-radius:12px}.screen-gallery img{width:100%;height:300px;object-fit:contain;display:block;background:#10151c;padding:12px}.screen-gallery figcaption{padding:13px 16px;color:var(--muted);font-size:14px}
+    .flow-list{padding-left:20px;color:var(--muted);line-height:1.9}.back-link{display:inline-flex;margin-top:28px;text-decoration:none;font-weight:700}
+    @media(max-width:760px){.feature-grid,.screen-gallery{grid-template-columns:1fr}.screen-gallery img{height:auto;max-height:380px}.project-hero{padding-top:52px}}
+  </style>
+</head>
+<body>
+<header><div class="wrap nav">
+  <a class="logo" href="index.html">FOON<span>_</span>YUL<span>_</span>XIN</a>
+  <nav aria-label="Project navigation"><a href="index.html#projects">← All Projects</a><a href="#features">Features</a><a href="#technology">Technology</a><a href="#screenshots">Screenshots</a></nav>
+</div></header>
+<main>
+  <section class="project-hero" id="overview"><div class="wrap">
+    <div class="eyebrow"><span class="pulse"></span> Web Application · Laboratory Reservation</div>
+    <h1>FK<span class="blue">Booking</span></h1>
+    <p class="lead">A web-based laboratory reservation system designed for students at the Faculty of Computing (FKOM), Universiti Malaysia Pahang (UMPSA). The system provides remote lab booking, visibility into lab availability, and a dashboard for managing reservations.</p>
+    <div class="project-meta"><span>Framework: Laravel</span><span>Language: PHP</span><span>Database: MySQL</span><span>UI: Bootstrap</span><span>Type: Academic Project</span></div>
+    <div class="project-actions"><a class="btn" href="https://github.com/foonyx/Laravel-Project" target="_blank" rel="noopener noreferrer">View Source Code on GitHub ↗</a><a class="btn secondary" href="index.html#projects">Back to Portfolio</a></div>
+  </div></section>
+
+  <section class="section"><div class="wrap"><div class="section-head"><h2>Project Overview</h2><p><span>//</span> The problem and purpose</p></div>
+    <div class="content-panel"><p>FKBooking was developed to make laboratory reservations more convenient for FKOM students. The project report identifies three main objectives: enabling students to reserve labs remotely, improving the allocation and use of laboratory spaces, and making lab availability visible before a reservation is made.</p></div>
+  </div></section>
+
+  <section class="section" id="features"><div class="wrap"><div class="section-head"><h2>Core Features</h2><p><span>//</span> Main modules described in the project report</p></div>
+    <div class="feature-grid">
+      <article class="feature-card"><h3>01 / Registration & Login</h3><p>New users can register with their details, while existing users log in to access the dashboard and booking functions.</p></article>
+      <article class="feature-card"><h3>02 / Lab Reservation</h3><p>Students can submit a laboratory booking request through the reservation interface.</p></article>
+      <article class="feature-card"><h3>03 / Lab Availability</h3><p>Users can check laboratory availability before making a reservation, helping them plan their booking.</p></article>
+      <article class="feature-card"><h3>04 / User Dashboard</h3><p>The dashboard allows users to view their lab schedules and cancel existing bookings.</p></article>
+      <article class="feature-card"><h3>05 / Report Submission</h3><p>The system includes a report submission function for users to send a report through a form.</p></article>
+    </div>
+  </div></section>
+
+  <section class="section" id="technology"><div class="wrap"><div class="section-head"><h2>Technology & Implementation</h2><p><span>//</span> Tools and development work</p></div>
+    <div class="content-panel"><p>The report describes setting up the Laravel environment, running the application locally with XAMPP and Apache, building the dashboard, and creating the interface with Bootstrap and standard web technologies.</p>
+      <div class="stack-list"><span>Laravel</span><span>PHP</span><span>MySQL</span><span>Bootstrap</span><span>HTML</span><span>CSS</span><span>JavaScript</span><span>XAMPP</span><span>Apache</span></div>
+      <h3 style="margin-top:28px">Database Structure</h3><p>The report documents four database tables: <strong>Bookings</strong>, <strong>Labs</strong>, <strong>Reports</strong>, and <strong>Users</strong>. Laravel migrations were used to create the tables, with models and controllers supporting the application's data operations.</p>
+      <h3 style="margin-top:28px">Development & Deployment</h3><ol class="flow-list"><li>Planning and requirements gathering.</li><li>System design, including use-case, class, and entity-relationship diagrams.</li><li>Laravel implementation, database setup, and dashboard development.</li><li>The report describes deployment to the university's InDAH hosting server.</li></ol>
+    </div>
+  </div></section>
+
+  <section class="section" id="screenshots"><div class="wrap"><div class="section-head"><h2>Interface Preview</h2><p><span>//</span> Screenshots from the project</p></div>
+    <div class="screen-gallery">
+      <figure><img src="assets/fkbooking-home.png" alt="FKBooking homepage" loading="lazy"><figcaption>Homepage — the entry point to the FKBooking system.</figcaption></figure>
+      <figure><img src="assets/fkbooking-dashboard.png" alt="FKBooking dashboard with lab booking listing" loading="lazy"><figcaption>User dashboard — a view of the lab reservation listing.</figcaption></figure>
+    </div>
+  </div></section>
+
+  <section class="section"><div class="wrap"><div class="content-panel"><h3>Project Links</h3><p>Explore the source code and implementation details.</p><div class="project-actions"><a class="btn" href="https://github.com/foonyx/Laravel-Project" target="_blank" rel="noopener noreferrer">View GitHub Repository ↗</a></div></div><a class="back-link" href="index.html#projects">← Back to all projects</a></div></section>
+</main>
+<footer><div class="wrap"><p>© 2026 Foon Yul Xin · Portfolio</p></div></footer>
+</body>
+</html>
