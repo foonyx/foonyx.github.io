@@ -109,18 +109,13 @@
       *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
     }
 
-      .project-links {
-          display: flex;
-          align-items: center;
-          gap: 50px;
-          flex-wrap: wrap;
-      }
-      
-      .project-links .project-link {
-          display: inline-block;
-          margin-top: 0;
-      }
 
 /* Small reusable text styles */
 .code-keyword { color: var(--blue); }
 .demo-link { margin-top: 12px; }
+
+
+/* Game-istry project links */
+.project-links { display: flex; align-items: center; flex-wrap: wrap; gap: 50px; }
+.project-links .project-link { margin-top: 0; }
+@media (max-width: 600px) { .project-links { gap: 15px; } }

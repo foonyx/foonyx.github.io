@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Game-istry, a 2D educational chemistry game built with Unity and C# to help Form 4 science-stream students learn about the rate of reaction.">
+  <meta name="theme-color" content="#0D1117">
+  <title>Game-istry | Foon Yul Xin</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .project-hero { padding: 76px 0 52px; }
+    .project-hero h1 { max-width: 900px; }
+    .project-hero .lead { max-width: 790px; color: var(--muted); font-size: 17px; margin: 18px 0 24px; }
+    .project-meta { display: flex; flex-wrap: wrap; gap: 9px; margin: 22px 0 28px; }
+    .project-meta span { color: var(--muted); background: var(--card); border: 1px solid var(--border); padding: 7px 12px; border-radius: 7px; font-size: 13px; }
+    .feature-image { display: block; width: 100%; max-height: 560px; object-fit: contain; border: 1px solid var(--border); border-radius: 14px; background: var(--card); padding: 14px; }
+    .content-panel { background: var(--card); border: 1px solid var(--border); border-radius: 13px; padding: clamp(22px, 4vw, 36px); }
+    .content-panel p, .content-panel li { color: var(--muted); }
+    .content-panel h3 { color: var(--blue); margin-bottom: 12px; }
+    .detail-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+    .detail-grid ul { padding-left: 20px; }
+    .game-gallery { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+    .game-gallery figure { margin: 0; overflow: hidden; background: var(--card); border: 1px solid var(--border); border-radius: 12px; }
+    .game-gallery img { width: 100%; height: 280px; object-fit: contain; display: block; background: #10151c; padding: 12px; }
+    .game-gallery figcaption { padding: 13px 16px; color: var(--muted); font-size: 14px; }
+    .video-frame { position: relative; width: 100%; aspect-ratio: 16 / 9; overflow: hidden; border-radius: 13px; border: 1px solid var(--border); background: #000; }
+    .video-frame iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+    .project-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 16px; margin-top: 24px; }
+    .project-actions .btn { display: inline-flex; align-items: center; justify-content: center; }
+    .back-link { display: inline-flex; margin-top: 28px; text-decoration: none; font-weight: 700; }
+    @media (max-width: 760px) { .detail-grid, .game-gallery { grid-template-columns: 1fr; } .game-gallery img { height: auto; max-height: 350px; } .project-hero { padding-top: 52px; } }
+  </style>
+</head>
+<body>
+<header>
+  <div class="wrap nav">
+    <a class="logo" href="index.html">FOON<span>_</span>YUL<span>_</span>XIN</a>
+    <nav aria-label="Project navigation">
+      <a href="index.html#projects">← All Projects</a>
+      <a href="#overview">Overview</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#demo">Gameplay Demo</a>
+    </nav>
+  </div>
+</header>
+<main>
+  <section class="project-hero" id="overview">
+    <div class="wrap">
+      <div class="eyebrow"><span class="pulse"></span> 2D Game Development · Educational Game</div>
+      <h1>Game-<span class="blue">istry</span></h1>
+      <p class="lead">A 2D educational chemistry game developed with Unity to help Form 4 science-stream students learn about the rate of reaction through interactive activities.</p>
+      <div class="project-meta">
+        <span>Engine: Unity</span><span>Language: C#</span><span>Type: 2D Educational Game</span><span>Topic: Rate of Reaction</span>
+      </div>
+      <img class="feature-image" src="assets/gameistry-gameplay.png" alt="Gameplay screenshot from Game-istry showing the educational chemistry game">
+      <div class="project-actions">
+        <a class="btn" href="https://github.com/foonyx/Gameistry/releases/latest" target="_blank" rel="noopener noreferrer">View Game &amp; Download →</a>
+        <a class="btn secondary" href="https://youtu.be/MVEx8UYTfno" target="_blank" rel="noopener noreferrer">▶ Watch Demo on YouTube ↗</a>
+        <a class="btn secondary" href="https://github.com/foonyx/Gameistry" target="_blank" rel="noopener noreferrer">View Source Code ↗</a>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="section-head"><h2>About the Game</h2><p><span>//</span> Learning chemistry through interactive play</p></div>
+      <div class="content-panel">
+        <p>Game-istry is a 2D educational game created to support Form 4 science-stream students in learning the concept of the rate of reaction. The project combines a game-based format with chemistry learning activities.</p>
+        <p>It was developed using Unity and C#. The project is available through its GitHub repository and release page.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="gallery">
+    <div class="wrap">
+      <div class="section-head"><h2>Gameplay Gallery</h2><p><span>//</span> Selected visuals from Game-istry</p></div>
+      <div class="game-gallery">
+        <figure><img src="assets/gameistry-logo.png" alt="Game-istry game logo" loading="lazy"><figcaption>Game-istry — project logo.</figcaption></figure>
+        <figure><img src="assets/gameistry-loading.png" alt="Game-istry loading screen" loading="lazy"><figcaption>Loading screen.</figcaption></figure>
+        <figure><img src="assets/gameistry-gameplay.png" alt="Game-istry gameplay screen" loading="lazy"><figcaption>Gameplay — chemistry learning environment.</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <section id="demo">
+    <div class="wrap">
+      <div class="section-head"><h2>Watch the Gameplay Demo</h2><p><span>//</span> Game-istry in action</p></div>
+      <div class="video-frame"><iframe src="https://www.youtube-nocookie.com/embed/MVEx8UYTfno" title="Game-istry gameplay demo" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+      <a class="back-link" href="index.html#projects">← Back to all projects</a>
+    </div>
+  </section>
+</main>
+<footer><p>© 2026 Foon Yul Xin <span>·</span> Built with care and code.</p></footer>
+</body>
+</html>
